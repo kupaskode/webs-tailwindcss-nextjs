@@ -1,9 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  @apply scroll-smooth;
 }
 
 a {
@@ -13,4 +20,99 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.effect-underline {
+  display: inline-block;
+  padding-bottom: 6px;
+  position: relative;
+  @apply text-2xl font-semibold tracking-wide text-slate-800 transition-all duration-1000 ease-out group-hover:text-primary;
+}
+
+.effect-underline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  height: 3px;
+  background-color: #ff125b;
+  transition: all 0.25s ease-out;
+}
+
+.effect-underline:hover::before {
+  width: 100%;
+}
+
+.swiper-button-next {
+  color: #ff125b !important;
+}
+
+.swiper-button-prev {
+  color: #ff125b !important;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-[4px] bg-primary py-3 px-7 text-base font-medium tracking-wide text-white shadow-sm shadow-primary/30 transition-all duration-500 ease-in-out hover:opacity-75;
+  }
+
+  .btn-secondary {
+    @apply rounded-[4px] bg-secondary py-3 px-7 text-base font-medium tracking-wide text-slate-700 shadow-sm shadow-secondary/30 transition-all duration-500 ease-in-out hover:bg-slate-300;
+  }
+
+  .card-service {
+    @apply box-border cursor-pointer overflow-hidden rounded-md bg-white p-10 shadow-md shadow-secondary/25 transition-all duration-500 ease-in-out group-hover:-translate-y-1 group-hover:bg-primary md:p-5 lg:p-6 xl:p-8;
+  }
+
+  .icon-service {
+    @apply h-12 w-12 items-center justify-center rounded-md border-2 border-primary text-primary transition-all duration-500 group-hover:border-2 group-hover:border-white group-hover:text-white lg:h-14 lg:w-14;
+  }
+
+  .title-service {
+    @apply text-lg font-medium text-slate-800 transition-property duration-time ease-soft group-hover:text-white lg:text-[24px];
+  }
+
+  .desc-service {
+    @apply text-base font-normal leading-7 text-slate-500 transition-property duration-time ease-soft group-hover:text-white;
+  }
+}
+
+@layer utilities {
+  .portfolio-title {
+    @apply text-xl font-semibold tracking-wide text-slate-800 transition-all duration-700 ease-out group-hover:text-primary;
+  }
+
+  .heading-title {
+    @apply text-center text-sm font-bold uppercase tracking-[20px] text-slate-800;
+  }
+
+  .sub-heading {
+    @apply text-center text-4xl font-bold text-slate-700 xl:text-5xl 2xl:text-5xl;
+  }
+
+  .desc-heading {
+    @apply block text-center text-base font-normal leading-7 text-slate-500 lg:text-sm xl:text-base xl:leading-7;
+  }
+
+  .hamburger-line {
+    @apply my-2 block h-[2px] w-[30px] rounded-full bg-slate-800;
+  }
+
+  .hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+  }
+
+  .hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+  }
+
+  .hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+  }
 }
