@@ -22,8 +22,8 @@ export default function Navbar() {
         <div className="relative flex items-center justify-between">
           <div className="px-4">
             <Link href="#home">
-              <a className="block py-6 text-lg font-bold tracking-wider">
-                <img src="/img/logo.svg" alt="Logo" />
+              <a className="block py-6 text-lg font-bold text-primary">
+                yubliwarokka
               </a>
             </Link>
           </div>
