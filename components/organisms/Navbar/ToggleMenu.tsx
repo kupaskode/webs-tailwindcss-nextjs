@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 
 export default function ToggleMenu() {
   useEffect(() => {
-    window.onclick = () => {
+    window.addEventListener('click', () => {
       document
         .querySelector('#hamburger')
         ?.classList.toggle('hamburger-active');
       document.querySelector('#nav-menu')?.classList.toggle('hidden');
-    };
+    });
   }, []);
 
   return (
