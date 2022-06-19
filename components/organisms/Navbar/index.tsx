@@ -5,15 +5,15 @@ import ToggleMenu from './ToggleMenu';
 
 export default function Navbar() {
   useEffect(() => {
-    window.onscroll = () => {
+    window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
 
-      if (window.pageYOffset) {
+      if (window.pageYOffset > 0) {
         header?.classList.add('navbar-fixed');
       } else {
         header?.classList.remove('navbar-fixed');
       }
-    };
+    });
   }, []);
 
   return (

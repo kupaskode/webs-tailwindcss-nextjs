@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import BackToTop from '../components/atoms/BackToTop';
 import About from '../components/organisms/About';
 import Blog from '../components/organisms/Blog';
 import Client from '../components/organisms/Client';
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Client />
       <Blog />
       <Contact />
+      <BackToTop />
     </Layout>
   );
 };

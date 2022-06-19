@@ -54,6 +54,8 @@
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "max-len": "off",
-    "react/jsx-boolean-value": "off"
+    "react/jsx-boolean-value": "off",
+    "react/jsx-fragments": "off",
+    "react/jsx-no-useless-fragment": "off"
   }
 }
