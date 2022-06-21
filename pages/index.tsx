@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <Client />
       <Blog />
       <Contact />
-      <BackToTop />
+      {/* <BackToTop /> */}
     </Layout>
   );
 };
